@@ -1,0 +1,271 @@
+text,intent
+Yemek için malzeme önerisi,malzeme_sorgu
+Az kalorili yemek önerisi var mı?,diyet_onerisi
+Küçük bir şeyler yemek istiyorum,ara_ogun
+"Teşekkürler, bye",veda
+Hey lütfen,selamlama
+Kilo vermek için tarifler,diyet_onerisi
+Nasılsınız? lütfen,selamlama
+Enerji veren ara öğün öner lütfen,ara_ogun
+Çikolatalı tatlı nasıl yapılır?,tatli
+Kahvaltıda ne pişirsem?,kahvalti
+Az yağlı yemek önerisi lütfen,diyet_onerisi
+Diyet için ne yemeliyim?,diyet_onerisi
+Seyahat etmeyi sever misin?,konu_disi
+Diyet için sağlıklı yemekler lütfen,diyet_onerisi
+Selamlar lütfen,selamlama
+Ara öğün için sağlıklı ne var?,ara_ogun
+Ara öğün için sağlıklı ne var? lütfen,ara_ogun
+Protein ağırlıklı diyet yemekleri,diyet_onerisi
+Ara öğün için sağlıklı ne var?,ara_ogun
+Herkese merhaba olur mu?,selamlama
+Sonra görüşürüz lütfen,veda
+Atıştırmalık önerir misin? olur mu?,ara_ogun
+Sağlıklı tatlı önerileri,tatli
+Film önerir misin?,konu_disi
+Hey,selamlama
+Güle güle lütfen,veda
+Az kalorili yemek önerisi var mı? olur mu?,diyet_onerisi
+Kısa sürede yapılacak ara öğün önerileri,ara_ogun
+Az yağlı yemek önerisi olur mu?,diyet_onerisi
+Hangi müzikleri dinliyorsun? lütfen,konu_disi
+Nasılsınız?,selamlama
+Tatlı olmayan ara öğün önerisi lütfen,ara_ogun
+Kahvaltıdan sonra ne yemeli?,ana_ogun
+İyi günler,selamlama
+Kilo vermek için tarifler,diyet_onerisi
+Yemek için malzeme önerisi,malzeme_sorgu
+Diyet kahvaltı önerisi,diyet_onerisi
+Yemekte hangi malzemeler var?,malzeme_sorgu
+Yemekte hangi malzemeler var? lütfen,malzeme_sorgu
+Pratik ana öğün tarifleri,ana_ogun
+Küçük bir şeyler yemek istiyorum,ara_ogun
+İyi akşamlar,veda
+Tatil planın var mı?,konu_disi
+Ana öğün için kolay yemek önerisi var mı?,ana_ogun
+Tatlı tarifin var mı?,tatli
+Meyveli tatlı öner olur mu?,tatli
+Akşam yemeği için tarif verir misin? olur mu?,ana_ogun
+Hey lütfen,selamlama
+Bu tarifte ne var?,malzeme_sorgu
+Sonra görüşürüz lütfen,veda
+Kolay tatlı tarifleri lütfen,tatli
+Malzemeler nelerdir?,malzeme_sorgu
+Tarifte ne kullanılıyor?,malzeme_sorgu
+Sonra görüşürüz,veda
+Evde ana yemek yapmak istiyorum,ana_ogun
+Hızlı kahvaltı önerileri,kahvalti
+Hoşça kal,veda
+Ara öğün için sağlıklı ne var? lütfen,ara_ogun
+Pratik kahvaltılık tarifleri var mı?,kahvalti
+Peynirli kahvaltılık tarifleri lütfen,kahvalti
+Spor yapmayı seviyor musun?,konu_disi
+Peynirli kahvaltılık tarifleri,kahvalti
+Kahvaltıda ne pişirsem?,kahvalti
+Bu tarifte ne var? olur mu?,malzeme_sorgu
+Tatlı krizine ne iyi gelir? lütfen,tatli
+Herkese merhaba lütfen,selamlama
+Evde ana yemek yapmak istiyorum,ana_ogun
+Görüşürüz,veda
+Diyet için ne yemeliyim?,diyet_onerisi
+Allahaısmarladık lütfen,veda
+Pratik ana öğün tarifleri lütfen,ana_ogun
+Diyet kahvaltı önerisi olur mu?,diyet_onerisi
+Doyurucu bir ana yemek önerisi,ana_ogun
+Hafif tatlı tarifleri lütfen,tatli
+Bay bay lütfen,veda
+Evde ana yemek yapmak istiyorum,ana_ogun
+Yemekte hangi malzemeler var?,malzeme_sorgu
+Doyurucu bir ana yemek önerisi,ana_ogun
+Kahvaltıda ne pişirsem?,kahvalti
+Kahvaltılık sağlıklı seçenekler,kahvalti
+Öğle yemeği için ne önerirsin?,ana_ogun
+Sağlıklı diyet menüsü verir misin? lütfen,diyet_onerisi
+Öğle yemeği için ne önerirsin? olur mu?,ana_ogun
+Küçük bir şeyler yemek istiyorum lütfen,ara_ogun
+Diyet için ne yemeliyim?,diyet_onerisi
+Kısa sürede yapılacak ara öğün önerileri,ara_ogun
+Günaydın lütfen,selamlama
+Film önerir misin? olur mu?,konu_disi
+Merhaba,selamlama
+Küçük bir şeyler yemek istiyorum lütfen,ara_ogun
+Nasılsınız? lütfen,selamlama
+Tatlı krizine ne iyi gelir?,tatli
+Tatlı tarifin var mı?,tatli
+Küçük bir şeyler yemek istiyorum olur mu?,ara_ogun
+Pratik ana öğün tarifleri,ana_ogun
+Hoşça kal lütfen,veda
+Ev yapımı tatlı tarifi ver,tatli
+Kilo vermek için tarifler,diyet_onerisi
+Kahvaltı nasıl hazırlanır? olur mu?,kahvalti
+Hangi müzikleri dinliyorsun? olur mu?,konu_disi
+"Teşekkürler, hoşça kal",veda
+Kitap önerisi verir misin?,konu_disi
+Ev yapımı tatlı tarifi ver olur mu?,tatli
+Kahvaltıda ne pişirsem?,kahvalti
+Pratik kahvaltılık tarifleri var mı? lütfen,kahvalti
+Diyet kahvaltı önerisi,diyet_onerisi
+Bugün hava çok güzel,konu_disi
+Diyet kahvaltı önerisi,diyet_onerisi
+Az yağlı yemek önerisi,diyet_onerisi
+Yemekte hangi malzemeler var?,malzeme_sorgu
+Güzel bir kahvaltı menüsü yapalım,kahvalti
+Hafif ana öğün öner olur mu?,ana_ogun
+Evde ana yemek yapmak istiyorum,ana_ogun
+"Merhaba, size nasıl yardımcı olabilirim?",selamlama
+Görüşürüz,veda
+Atıştırmalık önerir misin? lütfen,ara_ogun
+Yemekte domates var mı?,malzeme_sorgu
+Hangi müzikleri dinliyorsun?,konu_disi
+Herkese merhaba olur mu?,selamlama
+Hoş geldiniz,selamlama
+Ana yemek tarifi isterim lütfen,ana_ogun
+Ofiste ara öğün için ne yapabilirim?,ara_ogun
+Malzemeler hakkında bilgi verir misin?,malzeme_sorgu
+Pratik ana öğün tarifleri,ana_ogun
+Hava nasıl bugün?,konu_disi
+Enerji veren ara öğün öner,ara_ogun
+Yemekte hangi malzemeler var?,malzeme_sorgu
+Tarifte ne kullanılıyor? lütfen,malzeme_sorgu
+Herkese merhaba,selamlama
+Bay bay,veda
+Bay bay,veda
+Hafif tatlı tarifleri olur mu?,tatli
+Bugün nasılsın?,konu_disi
+Ana yemek tarifi isterim lütfen,ana_ogun
+Hangi baharatları kullanmalıyım? lütfen,malzeme_sorgu
+Hoş geldiniz,selamlama
+İyi günler lütfen,selamlama
+Canım atıştırmalık istedi,ara_ogun
+Allahaısmarladık,veda
+Akşam yemeği için tarif verir misin?,ana_ogun
+Malzeme listesi lazım,malzeme_sorgu
+Pratik ana öğün tarifleri,ana_ogun
+Hafta sonu planların neler? lütfen,konu_disi
+Kolay tatlı tarifleri olur mu?,tatli
+Canım atıştırmalık istedi,ara_ogun
+Film önerir misin?,konu_disi
+Kahvaltı için ne önerirsin? lütfen,kahvalti
+Güle güle olur mu?,veda
+Kahvaltı için değişik tarifler lütfen,kahvalti
+Bugün ne pişirebilirim akşam yemeği olarak? lütfen,ana_ogun
+Kahvaltıda ne pişirsem?,kahvalti
+Hangi müzikleri dinliyorsun? lütfen,konu_disi
+Allahaısmarladık lütfen,veda
+Kolay tatlı tarifleri,tatli
+Hızlı kahvaltı önerileri,kahvalti
+Kahvaltılık sağlıklı seçenekler,kahvalti
+Hafta sonu planların neler?,konu_disi
+Ev yapımı tatlı tarifi ver lütfen,tatli
+Sağlıklı diyet menüsü verir misin? lütfen,diyet_onerisi
+Kilo vermek için tarifler,diyet_onerisi
+Tatil planın var mı?,konu_disi
+Canım atıştırmalık istedi lütfen,ara_ogun
+Küçük bir şeyler yemek istiyorum,ara_ogun
+Diyet yemek tarifleri isterim,diyet_onerisi
+Malzeme listesi lazım lütfen,malzeme_sorgu
+Kahvaltı için değişik tarifler,kahvalti
+Bugün nasılsın?,konu_disi
+Sağlıklı diyet menüsü verir misin? lütfen,diyet_onerisi
+Sonra görüşürüz,veda
+Kahvaltı nasıl hazırlanır? lütfen,kahvalti
+Ofiste ara öğün için ne yapabilirim?,ara_ogun
+İyi günler dilerim lütfen,veda
+Diyet için ne yemeliyim? olur mu?,diyet_onerisi
+Sağlıklı tatlı önerileri,tatli
+Kahvaltılık sağlıklı seçenekler olur mu?,kahvalti
+Kahvaltı nasıl hazırlanır?,kahvalti
+Malzeme listesi lazım,malzeme_sorgu
+Pratik ana öğün tarifleri,ana_ogun
+Kısa sürede yapılacak ara öğün önerileri lütfen,ara_ogun
+Meyveli tatlı öner,tatli
+Seyahat etmeyi sever misin?,konu_disi
+Hafta sonu planların neler? olur mu?,konu_disi
+Güle güle,veda
+Hafta sonu planların neler?,konu_disi
+Kahvaltıda ne pişirsem?,kahvalti
+Yemekte hangi malzemeler var?,malzeme_sorgu
+Kolay tatlı tarifleri lütfen,tatli
+Güle güle,veda
+Film önerir misin?,konu_disi
+Film önerir misin?,konu_disi
+Tatlı tarifin var mı? lütfen,tatli
+Tatlı tarifin var mı?,tatli
+Malzemeler hakkında bilgi verir misin? lütfen,malzeme_sorgu
+Yemekte hangi malzemeler var? lütfen,malzeme_sorgu
+Kahvaltıda ne pişirsem?,kahvalti
+Şekerli tatlı önerir misin? lütfen,tatli
+Küçük bir şeyler yemek istiyorum lütfen,ara_ogun
+Hoş geldiniz lütfen,selamlama
+Düşük kalorili atıştırmalıklar,diyet_onerisi
+Hafif tatlı tarifleri,tatli
+Kahvaltı nasıl hazırlanır? lütfen,kahvalti
+Nasılsınız? olur mu?,selamlama
+Hey,selamlama
+Malzemeler hakkında bilgi verir misin? lütfen,malzeme_sorgu
+"Teşekkürler, bye",veda
+Diyet için sağlıklı yemekler lütfen,diyet_onerisi
+Hoşça kal,veda
+Az kalorili yemek önerisi var mı?,diyet_onerisi
+Diyet kahvaltı önerisi,diyet_onerisi
+Çikolatalı tatlı nasıl yapılır?,tatli
+Bugün nasılsın?,konu_disi
+Diyet kahvaltı önerisi,diyet_onerisi
+Yemek için malzeme önerisi olur mu?,malzeme_sorgu
+Selamlar,selamlama
+Ev yapımı tatlı tarifi ver lütfen,tatli
+"Merhaba, size nasıl yardımcı olabilirim?",selamlama
+Bugün ne pişirebilirim akşam yemeği olarak?,ana_ogun
+"Teşekkürler, hoşça kal",veda
+Hey,selamlama
+Evde ana yemek yapmak istiyorum lütfen,ana_ogun
+Şekerli tatlı önerir misin?,tatli
+İyi akşamlar lütfen,veda
+Kısa sürede yapılacak ara öğün önerileri,ara_ogun
+Doyurucu bir ana yemek önerisi,ana_ogun
+Kahvaltı tabağı için öneri,kahvalti
+Pratik ana öğün tarifleri olur mu?,ana_ogun
+Canım atıştırmalık istedi,ara_ogun
+Kısa sürede yapılacak ara öğün önerileri lütfen,ara_ogun
+Hangi müzikleri dinliyorsun?,konu_disi
+Hafta sonu planların neler? lütfen,konu_disi
+Hangi baharatları kullanmalıyım?,malzeme_sorgu
+Bugün hava çok güzel,konu_disi
+Güzel bir kahvaltı menüsü yapalım lütfen,kahvalti
+Evde ana yemek yapmak istiyorum olur mu?,ana_ogun
+Merhaba lütfen,selamlama
+Kahvaltı için değişik tarifler lütfen,kahvalti
+Kahvaltı nasıl hazırlanır? lütfen,kahvalti
+Kitap önerisi verir misin?,konu_disi
+Hoşça kal,veda
+Ana yemek tarifi isterim olur mu?,ana_ogun
+Kısa sürede yapılacak ara öğün önerileri,ara_ogun
+Malzemeler nelerdir?,malzeme_sorgu
+Tarifte ne kullanılıyor? lütfen,malzeme_sorgu
+Bu tarifte ne var?,malzeme_sorgu
+Sağlıklı tatlı önerileri lütfen,tatli
+Kolay tatlı tarifleri olur mu?,tatli
+Tatlı tarifin var mı?,tatli
+Meyveli tatlı öner lütfen,tatli
+Diyet için sağlıklı yemekler,diyet_onerisi
+Kahvaltı için ne önerirsin?,kahvalti
+Sağlıklı atıştırmalıklar nelerdir?,ara_ogun
+Sağlıklı atıştırmalıklar nelerdir? lütfen,ara_ogun
+Herkese merhaba,selamlama
+Hafif ana öğün öner,ana_ogun
+Peynirli kahvaltılık tarifleri lütfen,kahvalti
+Günaydın,selamlama
+Allahaısmarladık,veda
+Hoş geldiniz lütfen,selamlama
+İyi günler lütfen,selamlama
+Tarifte ne kullanılıyor?,malzeme_sorgu
+Hangi baharatları kullanmalıyım? lütfen,malzeme_sorgu
+Malzemeler nelerdir? lütfen,malzeme_sorgu
+Hoş geldiniz,selamlama
+İyi günler dilerim,veda
+Sonra görüşürüz,veda
+Sağlıklı tatlı önerileri olur mu?,tatli
+Bugün ne pişirebilirim akşam yemeği olarak? lütfen,ana_ogun
+Diyet yemek tarifleri isterim,diyet_onerisi
+Tatil planın var mı? lütfen,konu_disi
+Hangi müzikleri dinliyorsun? lütfen,konu_disi
