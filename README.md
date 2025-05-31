@@ -72,6 +72,7 @@ Chatbot, aşağıdaki intent’lere uygun olarak cevap üretebilmektedir:
 </p>
 
 Kullanıcı mesajı intent sınıflandırıcısı tarafından sınıflandırılır, uygun intent’e göre cevap seçilir, kullanıcıya sunulur.
+
 ---
 
 ## 🗃️ Veri Seti
