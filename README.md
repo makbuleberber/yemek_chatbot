@@ -66,8 +66,6 @@ Chatbot, aşağıdaki intent’lere uygun olarak cevap üretebilmektedir:
 | `diyet_onerisi` | Düşük kalorili besin önerisi | Kalorisiz bir şey önerir misin?  |
 | `konu_disi`     | Alakasız içerik              | Film önerisi verir misin?        |
 
-### 🧾 Akış Diyagramı
-
 <h2>🧾 Akış Diyagramı</h2>
 <p align="center">
   <img src="photos/akisdiyagrami.png" alt="Akış Diyagramı" width="600"/>
