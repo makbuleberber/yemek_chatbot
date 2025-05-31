@@ -1,0 +1,15 @@
+chromadb
+langchain
+langchain-google-genai
+langchain-community
+langchain-chroma
+langchainhub
+langchain-openai
+openai
+openpyxl
+pandas
+python-dotenv
+scikit-learn
+sentence-transformers
+streamlit
+transformers
