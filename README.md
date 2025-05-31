@@ -24,16 +24,12 @@ Elde edilen sınıflandırma performanslarını ölçmek (Precision, Recall, F1 
 
 Chatbot'u kullanıcıyla etkileşimli bir şekilde sunmak (Streamlit arayüzü ile).
 
----
-
 ## 👥 Hedef Kitle
 Son kullanıcılar: Ne pişireceğine karar veremeyen bireyler, diyet yapanlar veya tatlı tarifi arayanlar.
 
 Yapay Zeka / NLP öğrencileri: Chatbot geliştirme, intent sınıflandırma ve model karşılaştırma üzerine örnek proje arayan öğrenciler.
 
 Ürün geliştiriciler: Konuşma tabanlı yemek uygulamaları, dijital asistanlar ve tarif platformları geliştiren ekipler.
-
----
 
 ## 💡 Kullanılan Yöntemler
 Niyet (intent) sınıflandırma: Kullanıcı girdileri 9 farklı niyet sınıfında sınıflandırıldı (örneğin: ana_ogun, tatli, veda).
