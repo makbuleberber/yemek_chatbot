@@ -131,9 +131,9 @@ Her iki LLM için gerekli tüm bağımlılıklar [requirements.txt](requirements
 
 Proje kapsamında kullanılan veri seti, %80 eğitim ve %20 test olarak ayrılmıştır. Bu işlem Python ortamında programatik olarak gerçekleştirilmiştir.
 
-train_dataset.csv ve test_dataset.csv dosyaları Gemini ve GPT modelleri için ilgili klasörlerde ayrı ayrı konumlandırılmıştır.
+[train_dataset.csv](01_gemini/train_dataset.scv) ve [test_dataset.csv](01_gemini/test_dataset.csv) dosyaları Gemini ve GPT modelleri için ilgili klasörlerde ayrı ayrı konumlandırılmıştır.
 
-Sadece test verisi kullanılarak modellerin yanıt performansı değerlendirilmiştir. performance_gemini.ipynb ve performance.openai.ipynb klasörlerinde performans ölçümleri yapılmıştır.
+Sadece test verisi kullanılarak modellerin yanıt performansı değerlendirilmiştir. [performance_gemini.ipynb](01_gemini/performance_gemini.ipynb) ve [performance.openai.ipynb](02_openai/performance_openai.ipynb) klasörlerinde performans ölçümleri yapılmıştır.
 
 Değerlendirme süreci her iki model için aynı test girdileriyle gerçekleştirilerek adil bir karşılaştırma sağlanmıştır.
 
