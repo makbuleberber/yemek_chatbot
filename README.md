@@ -102,7 +102,7 @@ Entegrasyon Aracı: google.generativeai Python kütüphanesi
 
 Erişim: API Anahtarı ile Google AI Studio üzerinden sağlanmıştır.
 
-Kapsam: Kullanıcının sorduğu yemekle ilgili niyeti (intent) belirlenerek ilgili cevaplar Gemini tarafından oluşturulmuştur.
+Kapsam: Kullanıcının yemekle ilgili sorduğu sorular üzerinden niyeti belirlenmiş ve bu doğrultuda cevaplar Gemini tarafından oluşturulmuştur.
 
 ### 2. 🔶 OpenAI
 Model: GPT-4o
@@ -113,9 +113,17 @@ Entegrasyon Aracı: openai Python kütüphanesi
 
 Erişim: OpenAI hesabı üzerinden alınan API anahtarı ile gerçekleştirilmiştir.
 
-Kapsam: GPT modeli, intent bazlı veri kümesinden gelen girdilere göre uygun önerilerde bulunmuştur.
+Kapsam: GPT modeli, oluşturulan intent tabanlı veri kümesinden gelen kullanıcı girdilerine uygun olarak önerilerde bulunmuştur.
 
-🔧 Gereken tüm kütüphaneler: İkisini de kapsayan requirements.txt içinde listelenmiştir.
+### 🛠 Neden Bu Modeller Seçildi?
+Gemini 2.0 Flash, Google'ın hızlı ve hafif modeli olarak düşük gecikmeyle yanıt verebilme avantajı sağlamaktadır. Kullanıcı niyetini hızlı şekilde analiz ederek temel düzeyde etkili cevaplar üretmektedir.
+
+GPT-4o, OpenAI'nin en yeni ve güçlü modeli olup çoklu modalite (görsel, sesli, metin) desteği ile birlikte yüksek doğruluk oranına sahiptir. Karmaşık niyetleri ve cümle yapılarını daha başarılı analiz edebilmektedir.
+
+Bu iki model, farklı mimari yapılarına ve cevap üretim stratejilerine sahip olduklarından dolayı karşılaştırmalı değerlendirme için tercih edilmiştir.
+
+### 📦 Gerekli Kütüphaneler: 
+Her iki LLM için gerekli tüm bağımlılıklar [requirements.txt](requirements.txt) dosyasında listelenmiştir.
 
 ---
 
