@@ -14,15 +14,21 @@ Bu proje, yemek önerileri alanında geliştirilmiş bir intent tabanlı yapay z
 
 ## 🎯 Proje Amacı
 
-Seçilen bir konuya özgü chatbot geliştirmek.
+Bu projenin amacı, kullanıcılara yemek önerileri sunan, malzeme bazlı tarif aramaları yapabilen ve sağlıklı beslenme tercihleri konusunda rehberlik edebilen bir yemek chatbotu geliştirmektir.
 
-Geniş bir veri seti oluşturmak ve niyet sınıflandırması yapmak.
+Proje kapsamında:
 
-İki farklı LLM modeli (GPT & Gemini) ile sınıflandırma sonuçlarını karşılaştırmak.
+- Yemek tarifleri, malzeme listeleri ve beslenme tercihlerine (vegan, glütensiz, düşük kalorili vb.) dayalı geniş bir veri seti oluşturulmuştur.
 
-Elde edilen sınıflandırma performanslarını ölçmek (Precision, Recall, F1 Score).
+- Kullanıcı girdilerinden niyet (intent) sınıflandırması yapılmış ve bu sınıflar (örneğin: tarif önerisi, malzemeye göre arama, tatlı tarifleri) etiketlenmiştir.
 
-Chatbot'u kullanıcıyla etkileşimli bir şekilde sunmak (Streamlit arayüzü ile).
+- Sınıflandırma işlemi iki farklı büyük dil modeli (LLM), OpenAI GPT ve Google Gemini kullanılarak gerçekleştirilmiştir.
+
+- Her modelin sınıflandırma performansı, Precision, Recall ve F1 Score metrikleriyle değerlendirilmiştir.
+
+- Son olarak, geliştirilen yemek chatbotu, kullanıcının yazdığı doğal dil girdilerine yanıt veren etkileşimli bir arayüz ile Streamlit üzerinden sunulmuştur.
+
+Bu sayede kullanıcılar, hem doğal dilde etkileşim kurarak yemek tariflerine ulaşabilecek, hem de farklı LLM'lerin niyet sınıflandırma başarımını karşılaştırmalı olarak gözlemleyebilecektir.
 
 ## 👥 Hedef Kitle
 Son kullanıcılar: Ne pişireceğine karar veremeyen bireyler, diyet yapanlar veya tatlı tarifi arayanlar.
@@ -83,9 +89,9 @@ Toplam **1350 satırdan** oluşan veri seti oluşturulmuştur. Her satır, bir i
 
 | Intent           | Örnek Cümle                             |
 |------------------|-----------------------------------------|
-| selamlama        | Merhaba, nasılsınız?                    |
-| diyet_onerisi    | Az kalorili yemek önerisi var mı?       |
-| tatli            | Şekerli bir şeyler yemek istiyorum.     |
+| `selamlama`        | Merhaba, nasılsınız?                    |
+| `diyet_onerisi`    | Az kalorili yemek önerisi var mı?       |
+| `tatli`            | Şekerli bir şeyler yemek istiyorum.     |
 
 📂 [Veri seti dosyasına gitmek için tıklayın](01_gemini/yemek_chatbot_veriseti.csv)
 
@@ -94,33 +100,33 @@ Toplam **1350 satırdan** oluşan veri seti oluşturulmuştur. Her satır, bir i
 ## 🤖 Kullanılan LLM Modelleri
 
 ### 1. 🔷 Google Gemini
-Model: Gemini 2.0 Flash
+Model: `Gemini 2.0 Flash`
 
 Kullanım Yöntemi: Google Generative Language API
 
-Entegrasyon Aracı: google.generativeai Python kütüphanesi
+Vektörleştirme: `models/embedding-001` modeli ile Türkçe yemek odaklı metin verileri sayısal vektörlere dönüştürülmüş ve `Chroma` vektör veritabanında saklanmıştır.
 
-Erişim: API Anahtarı ile Google AI Studio üzerinden sağlanmıştır.
+Entegrasyon: API Anahtarı ile Google AI Studio üzerinden kaydolup API Keys sayfasından anahtar oluşturulup [.env](01_gemini/.env) dosyasına API Key kaydedilmiştir. Bu dosya `dotenv` kütüphanesi ile yüklenmiştir.
 
 Kapsam: Kullanıcının yemekle ilgili sorduğu sorular üzerinden niyeti belirlenmiş ve bu doğrultuda cevaplar Gemini tarafından oluşturulmuştur.
 
 ### 2. 🔶 OpenAI
-Model: GPT-4o
+Model: `GPT-4o`
 
 Kullanım Yöntemi: OpenAI API
 
-Entegrasyon Aracı: openai Python kütüphanesi
+Vektörleştirme: `text-embedding-3-large` modeli ile veri kümesindeki metinler sayısal vektörlere dönüştürülerek `Chroma` vektör veritabanında saklanmıştır.
 
-Erişim: OpenAI hesabı üzerinden alınan API anahtarı ile gerçekleştirilmiştir.
+Entegrasyon: OpenAI hesabı üzerinden alınan API anahtarı ile [.env](02_openai/.env) dosyasına API key yazılmıştır. Bu dosya `dotenv` kütüphanesi kullanılarak projeye yüklenmiştir.
 
 Kapsam: GPT modeli, oluşturulan intent tabanlı veri kümesinden gelen kullanıcı girdilerine uygun olarak önerilerde bulunmuştur.
 
 ### 🛠 Neden Bu Modeller Seçildi?
-Gemini 2.0 Flash, Google'ın hızlı ve hafif modeli olarak düşük gecikmeyle yanıt verebilme avantajı sağlamaktadır. Kullanıcı niyetini hızlı şekilde analiz ederek temel düzeyde etkili cevaplar üretmektedir.
+`Gemini 2.0 Flash`, hızlı çıkarım süresi ve metin anlama performansı sayesinde gerçek zamanlı öneri sistemleri için uygundur. Aynı zamanda embedding ve yanıt üretimi süreçlerinde Google’ın güçlü altyapısından faydalanma imkânı sağlar.
 
-GPT-4o, OpenAI'nin en yeni ve güçlü modeli olup çoklu modalite (görsel, sesli, metin) desteği ile birlikte yüksek doğruluk oranına sahiptir. Karmaşık niyetleri ve cümle yapılarını daha başarılı analiz edebilmektedir.
+`GPT-4o`, güçlü dil anlama ve üretme kabiliyetiyle, Türkçe gibi düşük kaynaklı dillerde dahi yüksek doğrulukla çalışabildiği için tercih edilmiştir. API desteğiyle kolay entegrasyon sunar ve düşük gecikmeli yanıtlar üretebilir.
 
-Bu iki model, farklı mimari yapılarına ve cevap üretim stratejilerine sahip olduklarından dolayı karşılaştırmalı değerlendirme için tercih edilmiştir.
+Bu iki model, karşılaştırmalı değerlendirme yapabilmek, farklı altyapılardan gelen performansları gözlemleyebilmek ve esnek bir RAG (Retrieval-Augmented Generation) yapısı kurabilmek için seçilmiştir.
 
 ### 📦 Gerekli Kütüphaneler: 
 Her iki LLM için gerekli tüm bağımlılıklar [requirements.txt](requirements.txt) dosyasında listelenmiştir.
@@ -153,17 +159,17 @@ Confusion Matrix : Gerçek ve tahmin edilen sınıflar arasındaki karışıklı
 📈 Değerlendirme Metriklerinin Yorumlanması
 Modelin başarımı, Precision, Recall ve F1-Score metrikleri üzerinden detaylı olarak analiz edilmiştir. Aşağıda, her sınıf için bu metrikler özetlenmiş ve genel başarıya katkıları yorumlanmıştır:
 
-<h2>🧾 Classification Report </h2>
+<h2> Classification Report </h2>
 <p align="center">
   <img src="photos/OpenAIClassification.png" alt="OpenAI Classification Report" width="600"/>
 </p>
 
 ### 📌 Gözlemler:
-diyet_onerisi sınıfı, recall değerinin düşük olması nedeniyle modelin bu sınıfa ait örnekleri tanımakta zorlandığını göstermektedir (bazılarını başka sınıflara atamış).
+`diyet_onerisi` sınıfı, recall değerinin düşük olması nedeniyle modelin bu sınıfa ait örnekleri tanımakta zorlandığını göstermektedir (bazılarını başka sınıflara atamış).
 
-kahvalti ve selamlama sınıflarında recall yüksek, ancak precision görece düşüktür. Bu da modelin bazı örnekleri bu sınıflara fazladan atadığını gösterir.
+`kahvalti` ve `selamlama` sınıflarında recall yüksek, ancak precision görece düşüktür. Bu da modelin bazı örnekleri bu sınıflara fazladan atadığını gösterir.
 
-veda sınıfında recall düşüklüğü, modelin bazı gerçek veda örneklerini başka sınıflara atadığına işaret eder.
+`veda` sınıfında recall düşüklüğü, modelin bazı gerçek veda örneklerini başka sınıflara atadığına işaret eder.
 
 ### 📊 Genel Başarı:
 Accuracy (Doğruluk): %94
@@ -184,15 +190,15 @@ OpenAI GPT modeline ait sınıflandırma sonuçları, aşağıda verilen confusi
 </p>
 
 ### 🔍 Öne Çıkan Gözlemler:
-ara_ogun, kahvalti, malzeme_sorgu ve selamlama sınıflarında %100 başarı elde edilmiştir.
+`ara_ogun`, `kahvalti`, `malzeme_sorgu` ve `selamlama` sınıflarında %100 başarı elde edilmiştir.
 
-diyet_onerisi sınıfında yalnızca 23/30 doğru tahmin yapılmıştır. Bu sınıf, modelin en çok karıştırdığı kategori olmuştur. 6 örnek kahvalti, 1 örnek ise ara_ogun sınıfı ile karıştırılmıştır.
+`diyet_onerisi` sınıfında yalnızca 23/30 doğru tahmin yapılmıştır. Bu sınıf, modelin en çok karıştırdığı kategori olmuştur. 6 örnek `kahvalti`, 1 örnek ise `ara_ogun` sınıfı ile karıştırılmıştır.
 
-veda sınıfına ait 4 örnek, yanlışlıkla selamlama olarak sınıflandırılmıştır. Bu durum, günlük dilde bu iki niyetin benzer ifadelerle ifade edilmesinden kaynaklanabilir (örn. “Görüşürüz, kendine iyi bak”).
+`veda` sınıfına ait 4 örnek, yanlışlıkla `selamlama` olarak sınıflandırılmıştır. Bu durum, günlük dilde bu iki niyetin benzer ifadelerle ifade edilmesinden kaynaklanabilir (örn. “Görüşürüz, kendine iyi bak”).
 
-konu_disi niyeti ile selamlama arasında da bir miktar karışıklık görülmüştür.
+`konu_disi` niyeti ile selamlama arasında da bir miktar karışıklık görülmüştür.
 
-## Gemini Classification Report:
+## Gemini Classification Report ve Confusion Matrix:
 
 📈 Model Performansının Değerlendirilmesi
 Gemini modeli, test veri seti üzerinde yüksek doğruluk ve istikrarlı sınıflandırma sonuçları sunmuştur. Precision, Recall ve F1-Score metrikleri baz alınarak yapılan değerlendirme aşağıdaki gibidir:
@@ -204,18 +210,18 @@ Gemini modeli, test veri seti üzerinde yüksek doğruluk ve istikrarlı sınıf
 
 
 ### 🔍 Metriklerin Yorumu:
-Precision: Gemini modelinin tahmin ettiği sınıfların büyük kısmı doğru çıktı. Özellikle tatli, malzeme_sorgu ve kahvalti sınıflarında %100 başarı sağlandı.
+Precision: Gemini modelinin tahmin ettiği sınıfların büyük kısmı doğru çıktı. Özellikle `tatli`, `malzeme_sorgu` ve `kahvalti` sınıflarında %100 başarı sağlandı.
 
-Recall: Modelin sınıfları tanıma başarısı genellikle yüksekti. selamlama ve veda sınıflarında bazı örnekler başka sınıflarla karışmıştır.
+Recall: Modelin sınıfları tanıma başarısı genellikle yüksekti. `selamlama` ve `veda` sınıflarında bazı örnekler başka sınıflarla karışmıştır.
 
 F1-Score: Tüm sınıflarda 0.92–1.00 arasında f1 değerleri elde edilmiştir.
 
 ### 📌 Dikkat Çeken Bulgular:
-🔹malzeme_sorgu ve tatli sınıfları hem precision hem recall açısından mükemmel sonuçlar verdi.
+🔹`malzeme_sorgu` ve `tatli` sınıfları hem precision hem recall açısından mükemmel sonuçlar verdi.
 
-🔹konu_disi sınıfında birkaç örnek selamlama olarak yanlış sınıflandırılmıştır.
+🔹`konu_disi` sınıfında birkaç örnek `selamlama` olarak yanlış sınıflandırılmıştır.
 
-🔹veda sınıfındaki birkaç örnek de selamlama ile karışmıştır, bu da niyetler arası semantik benzerlikten kaynaklanabilir.
+🔹`veda` sınıfındaki birkaç örnek de `selamlama` ile karışmıştır, bu da niyetler arası semantik benzerlikten kaynaklanabilir.
 
 ### 📊 Genel Başarı:
 Accuracy (Doğruluk): %97
@@ -230,15 +236,16 @@ Modelin genel başarımı oldukça yüksek olup, sınıflar arasında dengeli bi
 
 | Özellik             | GPT-4o         | Gemini         |
 |---------------------|----------------|----------------|
-| Genel Doğruluk      | %94            | %97            |
+| Accuracy            | 0.95           | 0.97           |
+| Precision           | 0.94           | 0.98           |
+| Recall              | 0.94           | 0.97           |
 | Macro Avg F1-Score  | 0.94           | 0.97           |
-| Selamlama Performansı | Daha yüksek    | Biraz düşük    |
 | Konu Dışı Ayırımı   | Daha net       | Biraz karışıklık |
 | Genel Kararlılık    | Yüksek         | Yüksek         |
 
-GPT-4o, selamlama ve konu_disi gibi niyeti ayırt etmenin zor olduğu durumlarda daha dengeli bir yanıt verirken,
+GPT-4o, `selamlama` ve `konu_disi` gibi niyeti ayırt etmenin zor olduğu durumlarda daha dengeli bir yanıt verirken,
 
-Gemini, malzeme_sorgu, tatli ve kahvalti gibi daha açık ve içerik bazlı sınıflarda çok yüksek başarı sağladığı görülmektedir.
+Gemini, `malzeme_sorgu`, `tatli` ve `kahvalti` gibi daha açık ve içerik bazlı sınıflarda çok yüksek başarı sağladığı görülmektedir.
 
 ---
 
